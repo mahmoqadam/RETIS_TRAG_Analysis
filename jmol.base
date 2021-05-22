@@ -1,0 +1,16 @@
+load 'movie.xyz' {1 1 1} unitcell {  boxdimensions  90.00  90.00  90.00} 
+set PerspectiveDepth false
+select all; set measure angstroms
+cpk off
+set autobond false;
+boundbox on
+connections 
+connect 1.5 2.5 (_O) (_H) hbond
+wireframe 0.2
+hbonds 0.01
+color hbonds yellow
+cpk 25%
+
+#select atomno = 1
+#cpk 50%
+#color blue
